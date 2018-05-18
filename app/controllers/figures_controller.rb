@@ -1,5 +1,3 @@
-require 'pry'
-
 class FiguresController < ApplicationController
 
   get '/figures' do
@@ -23,5 +21,5 @@ class FiguresController < ApplicationController
     @figure.save
     redirect "figures/#{@figure.id}"
   end
-  
+
 end
