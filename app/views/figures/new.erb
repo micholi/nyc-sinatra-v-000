@@ -22,9 +22,23 @@ Landmars, CHECKBOXES & TEXTBOX
 
   <h4>Create New Title</h4>
   <br></br>
-  <label>name:</label>
-    <input type="text" name="pet[name]"></input>
-    <br></br>
+  <input type="text" name="title[name]"></input>
+  <br></br>
 
-  <input type="submit" value="Create Owner">
+  <h4>Landmarks</h4>
+  <br></br>
+
+  <%@landmarks.each do |landmark|%>
+    <input type="checkbox" name="owner[pet_ids][]" value="<%=pet.id%>" id="<%=pet.id%>"><%=pet.name%></input>
+  <%end%>
+  <br></br>
+
+  <h4>Create New Landmark</h4>
+  <br></br>
+  <input type="text" name="landmark[name]"></input>
+  <input type="text" name="landmark[year]"></input>
+  <br></br>
+
+  <input type="submit" value="Create Figure">
+  
 </form>
