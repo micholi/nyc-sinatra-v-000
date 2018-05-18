@@ -3,3 +3,28 @@ Name, TEXTBOX
 Titles, CHECKBOXES & TEXTBOX
 Landmars, CHECKBOXES & TEXTBOX
 -->
+<h1>Create a New Figure</h1>
+
+<form action="/figures" method="POST">
+  <h4>Name:</h4>
+  <br></br>
+
+  <input type="text" name="figure[name]">
+  <br></br>
+
+  <h4>Titles</h4>
+  <br></br>
+
+  <%@titles.each do |title|%>
+    <input type="checkbox" name="owner[pet_ids][]" value="<%=pet.id%>" id="<%=pet.id%>"><%=pet.name%></input>
+  <%end%>
+  <br></br>
+
+  <h4>Create New Title</h4>
+  <br></br>
+  <label>name:</label>
+    <input type="text" name="pet[name]"></input>
+    <br></br>
+
+  <input type="submit" value="Create Owner">
+</form>
