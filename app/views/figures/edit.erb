@@ -3,8 +3,6 @@
 <form action="/figures/<%=@figure.id%>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="PATCH">
 
-  <h1><%= @figure.name %></h1>
-
   <h4>Update Name:</h4>
   <input type="text" name="figure[name]" id="figure_name">
 
