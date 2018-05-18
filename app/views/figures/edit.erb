@@ -19,6 +19,17 @@
 
   <h4>Or Add a New Title</h4>
   <p>Title: <input type="text" name="title[name]" id="new_title"></p><br>
-  
+
+  <h4>Update Landmark(s)</h4>
+
+  <% @landmarks.each do |landmark| %>
+    <input type="checkbox" name="figure[landmark_ids][]" value="<%= landmark.id %>" id="landmark_<%= landmark.id %>"><%= 'checked' if @figure.landmarks.include?(landmark) %>><%= landmark.name %></input>
+    <br></br>
+  <% end %>
+
+  <h4>Or Add a New Title</h4>
+  <p>Title: <input type="text" name="title[name]" id="new_title"></p><br>
+
+
   <input type="submit" value="Update Figure">
 </form>
