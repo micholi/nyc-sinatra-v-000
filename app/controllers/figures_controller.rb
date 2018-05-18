@@ -15,7 +15,6 @@ class FiguresController < ApplicationController
     erb :'/landmarks/new'
   end
 
-=begin
   post '/figures' do
     @figure = Figure.create(params[:figure])
     if !params[:title][:name].empty?
@@ -26,6 +25,5 @@ class FiguresController < ApplicationController
     @figure.save
     redirect "figures/#{@figure.id}"
   end
-=end
 
 end
