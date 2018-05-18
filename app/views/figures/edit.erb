@@ -10,20 +10,15 @@
 
   <br></br>
 
-  <label>Choose an existing pet:</label>
+  <h4>Update Title(s)</h4>
 
-  <br></br>
+  <% @titles.each do |title| %>
+    <input type="checkbox" name="figure[title_ids][]" value="<%= title.id %>" id="title_<%= title.id %>"><%= 'checked' if @figure.titles.include?(title) %>><%= title.name %></input>
+    <br></br>
+  <% end %>
 
-  <%Pet.all.each do |pet|%>
-    <input type="checkbox" name="owner[pet_ids][]" id="<%= pet.id%>" value="<%=pet.id%>" <%='checked' if @owner.pets.include?(pet) %>><%=pet.name%></input>
-  <%end%>
-
-  <br></br>
-
-  <label>and/or, create a new pet:</label>
-  <br></br>
-  <label>name:</label>
-    <input  type="text" name="pet[name]" id="pet_name"></input>
-  <br></br>
-  <input type="submit" value="Update Owner">
+  <h4>Or Add a New Title</h4>
+  <p>Title: <input type="text" name="title[name]" id="new_title"></p><br>
+  
+  <input type="submit" value="Update Figure">
 </form>
