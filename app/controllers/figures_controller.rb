@@ -11,6 +11,10 @@ class FiguresController < ApplicationController
     erb :'/figures/new'
   end
 
+  get '/landmarks/new' do
+    erb :'/landmarks/new'
+  end
+
 =begin
   post '/figures' do
     @figure = Figure.create(params[:figure])
