@@ -23,15 +23,17 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id' do
-    
+    @figure = Figure.find_by(params[:id])
+    erb :'/figures/show'
   end
 
   get '/figures/:id/edit' do
-    
+    @figure = Figure.find_by(params[:id])
+    erb '/figures/edit'
   end
 
   patch '/figures/:id/edit' do
-    
+
   end
-  
+
 end
