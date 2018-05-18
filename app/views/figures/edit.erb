@@ -1,5 +1,4 @@
-<h1>Edit Figure Record</h1>
-<h3>Current Name: <%= @figure.name %></h3>
+<h1>Edit <%= @figure.name %></h1>
 
 <form action="/figures/<%=@figure.id%>" method="POST">
   <input type="hidden" id="hidden" name="_method" value="PATCH">
