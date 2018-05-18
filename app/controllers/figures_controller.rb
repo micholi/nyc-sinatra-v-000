@@ -12,7 +12,7 @@ class FiguresController < ApplicationController
   end
 
   post '/figures' do
-    binding.rpy
+    binding.pry
     @figure = Figure.create(params[:name])
   end
 end
