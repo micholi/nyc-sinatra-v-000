@@ -9,14 +9,14 @@ Landmars, CHECKBOXES & TEXTBOX
   <h4>Name:</h4>
   <br></br>
 
-  <input type="text" name="figure[name]">
+  <input type="text" name="figure[name]" id="figure_name">
   <br></br>
 
   <h4>Titles</h4>
   <br></br>
 
   <%@titles.each do |title|%>
-    <input type="checkbox" name="owner[pet_ids][]" value="<%=pet.id%>" id="<%=pet.id%>"><%=pet.name%></input>
+    <input type="checkbox" name="figure[title_ids][]" value="<%=title.id%>" id="<%=title.id%>"><%=title.name%></input>
   <%end%>
   <br></br>
 
@@ -29,7 +29,7 @@ Landmars, CHECKBOXES & TEXTBOX
   <br></br>
 
   <%@landmarks.each do |landmark|%>
-    <input type="checkbox" name="owner[pet_ids][]" value="<%=pet.id%>" id="<%=pet.id%>"><%=pet.name%></input>
+    <input type="checkbox" name="figure[landmark][name]" value="<%=landmark.id%>" id="<%=landmark.id%>"><%=landmark.name%></input>
   <%end%>
   <br></br>
 
