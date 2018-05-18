@@ -21,5 +21,17 @@ class FiguresController < ApplicationController
     @figure.save
     redirect "figures/#{@figure.id}"
   end
+
+  get '/figures/:id' do
+    
+  end
+
+  get '/figures/:id/edit' do
+    
+  end
+
+  patch '/figures/:id/edit' do
+    
+  end
   
 end
