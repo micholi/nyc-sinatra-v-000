@@ -42,7 +42,7 @@ class FiguresController < ApplicationController
     elsif !params[:landmark][:name].empty?
       @figure.landmarks << Landmark.create(name: params[:landmark])
     end
-    redirect "figures/#{{@figure.id}}"
+    redirect "figures/#{@figure.id}"
   end
 
 end
